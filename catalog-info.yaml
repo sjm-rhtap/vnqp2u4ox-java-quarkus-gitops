@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vnqp2u4ox-java-quarkus-gitops
+  description: This is GitOps manifest for vnqp2u4ox-java-quarkus   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=vnqp2u4ox-java-quarkus
+    backstage.io/kubernetes-id: vnqp2u4ox-java-quarkus 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: sjm-rhtap/vnqp2u4ox-java-quarkus-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vnqp2u4ox-java-quarkus
